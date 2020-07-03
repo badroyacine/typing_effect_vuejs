@@ -1,28 +1,48 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="overlay"></div>
+    <TypeEffect />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TypeEffect from './components/TypeEffect.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    TypeEffect
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  #app {
+    // font-family: 'Righteous', arial;
+    font-family: 'Pangolin', cursive, sans-serif;
+    font-weight: 400;
+    font-size: 4rem;
+    color: #fff;
+    background-image: url('assets/background-image.jpg');
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  .overlay {
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 </style>
